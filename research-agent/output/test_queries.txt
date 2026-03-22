@@ -1,0 +1,10 @@
+Tell me about the Ukrainian P1-SUN drone
+Знайди 3 рецепти здобної паски на Великдень та порівняй їх
+Compare FastAPI and Streamlit
+Compare naive RAG, sentence-window retrieval, and parent-child retrieval
+Compare weather in Costa del Sol and Costa Blanca for March 16-31, 2026
+Best 3 places in Spain for hip implant surgery
+What activities and events are in Velez-Malaga and Torre del Mar in March 2026?
+Compare Vélez-Málaga and Motril for living in 2026
+How does LangChain implement document loading and text splitting for RAG pipelines?
+Порівняй архітектуру трансформерів з попередніми підходами NLP для мовного моделювання

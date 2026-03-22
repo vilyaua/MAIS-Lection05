@@ -1,0 +1,13 @@
+services:
+  research-agent:
+    image: research-agent-rag:latest
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env  # API_KEY and MODEL_NAME injected at runtime
+    volumes:
+      - ./output:/app/output  # persist generated reports on host
+      - ./logs:/app/logs      # persist log files on host
+      - ./data:/app/data      # source documents for ingestion
+      - ./index:/app/index    # persisted FAISS index + BM25 chunks
