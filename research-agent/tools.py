@@ -122,7 +122,10 @@ def knowledge_search(query: str) -> str:
             source = Path(doc.metadata.get("source", "unknown")).name
             page = doc.metadata.get("page", "?")
             formatted.append(f"{i}. [Source: {source}, Page: {page}]\n{doc.page_content}")
-        return "\n\n---\n\n".join(formatted)
+        result = "\n\n---\n\n".join(formatted)
+        if len(result) > settings.max_search_content_length:
+            result = result[: settings.max_search_content_length] + "\n\n[... truncated]"
+        return result
     except Exception as e:
         return f"Knowledge search error: {e}"
 
