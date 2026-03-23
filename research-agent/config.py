@@ -19,7 +19,8 @@ class Settings(BaseSettings):
     base_url: str | None = None  # set to use an OpenAI-compatible provider
 
     max_search_results: int = 5
-    max_url_content_length: int = 8000  # caps text fed back to LLM
+    max_search_content_length: int = 3000  # caps web_search output fed back to LLM
+    max_url_content_length: int = 8000  # caps read_url text fed back to LLM
     output_dir: str = "output"
     max_iterations: int = 25  # prevents infinite ReAct loops
 

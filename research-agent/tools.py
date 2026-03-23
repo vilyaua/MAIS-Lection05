@@ -37,7 +37,10 @@ def web_search(query: str) -> str:
                 f"   URL: {r.get('href', 'N/A')}\n"
                 f"   Snippet: {r.get('body', 'N/A')}"
             )
-        return "\n\n".join(formatted)
+        result = "\n\n".join(formatted)
+        if len(result) > settings.max_search_content_length:
+            result = result[: settings.max_search_content_length] + "\n\n[... truncated]"
+        return result
     except Exception as e:
         return f"Search error: {e}"
 
